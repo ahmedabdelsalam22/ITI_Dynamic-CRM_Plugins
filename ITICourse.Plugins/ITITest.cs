@@ -11,22 +11,27 @@ namespace ITICourse.Plugins
     {
         public void Execute(IServiceProvider serviceProvider)
         {
-            var tracingService = (ITracingService)serviceProvider.GetService(typeof(ITITest)); // for debuging
-
-            var context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext)); // geva me info about entity and user who take action with entity 
-
-            var serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-
-            var service = serviceFactory.CreateOrganizationService(context.InitiatingUserId);
-
-            var itiCoursesProfEntity = new Entity("iti Courses Proffessor")
+            try
             {
-                ["name"] = "Ahmed Abd Elsalam",
-                ["gendreCode"] = new OptionSetValue()
-            };
+                var tracingService = (ITracingService)serviceProvider.GetService(typeof(ITITest)); // for debuging
 
-            throw new InvalidPluginExecutionException("test exp");
-           
+                var context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext)); // geva me info about entity and user who take action with entity 
+
+                var serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
+
+                var service = serviceFactory.CreateOrganizationService(context.InitiatingUserId);
+
+                var itiCoursesProfEntity = new Entity("iti Courses Proffessor")
+                {
+                    ["name"] = "Ahmed Abd Elsalam",
+                    ["gendreCode"] = new OptionSetValue()
+                };
+            }
+            catch (Exception e) 
+            {
+                throw new InvalidPluginExecutionException($"Error msg: {e.ToString()}");
+            }
+
         }
     }
 }
