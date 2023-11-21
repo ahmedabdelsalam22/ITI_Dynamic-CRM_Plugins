@@ -26,6 +26,15 @@ namespace ITICourse.Plugins
                     ["name"] = "Ahmed Abd Elsalam",
                     ["gendreCode"] = new OptionSetValue()
                 };
+
+                // Target entity 
+
+                //Entity targetEntity = (Entity)context.InputParameters["Target"];
+
+                //Entity entity = service.Retrieve(targetEntity.LogicalName , targetEntity.Id, new Microsoft.Xrm.Sdk.Query.ColumnSet("name")); // return name of entity 
+                //Entity entity = service.Retrieve(targetEntity.LogicalName , targetEntity.Id, new Microsoft.Xrm.Sdk.Query.ColumnSet(true)); // return all fields of entity 
+
+
             }
             catch (Exception e) 
             {
