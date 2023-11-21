@@ -14,7 +14,6 @@ This repository contains a set of plugins developed for Microsoft Dynamics CRM. 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -60,10 +59,5 @@ Explain how users can use your plugins and any configuration options they may ha
 
 If you would like to contribute to the development of these plugins, please follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file. Contributions, bug reports, and feature requests are welcome!
 
-## License
-
-This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
-
----
 
 Feel free to customize this template based on the specifics of your repository and plugins. Including detailed and clear information in your README file helps users understand and use your plugins effectively.
